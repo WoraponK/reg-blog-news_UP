@@ -145,3 +145,29 @@ nav {
         margin-right: 2rem;
     }
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.wrapper {
+    outline: 1px solid red;
+    width: 80%;
+    height: 100vh;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.25rem 0;
+    background-color: #040D12;
+
+    & p {
+        margin: 0;
+        color: #fff;
+    }
+}
