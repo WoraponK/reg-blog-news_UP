@@ -26,13 +26,14 @@ button, .button-select {
             color: var(--color-main)
         }
     }
+    
 }
 
 .button-select {
     padding-right: 1.5rem;
     & ion-icon {
         position: absolute;
-        transform: translate(50px, 2px);
+        transform: translate(55px, 2px);
         color: #000;
         font-size: 24px;
     }
