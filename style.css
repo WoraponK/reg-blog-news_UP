@@ -196,7 +196,7 @@ footer {
 
 .main {
     display: grid;
-    grid-template-columns: 75% auto;
+    grid-template-columns: 70% auto;
 }
 
 .newsCtn {
@@ -251,4 +251,40 @@ footer {
 
 .recentCtn {
     outline: 1px solid red;
+
+    & h2 {
+        & ion-icon {
+            margin-right: 0.5rem;
+        }
+    }
+
+    .recentBx {
+        height: 180px;
+        padding: 1rem 0;
+        outline: 1px solid red;
+
+        .recentBx-in {
+            display: flex;
+            flex-direction: row;
+            height: 150px;
+    
+            .recent-thumbnail {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                outline: 1px solid red;
+                border-radius: 5px;
+                height: 100%;
+                width: 250px;
+                background-image: var(--bg-img);
+    
+            }
+    
+            .recent-text {
+                margin-left: 0.5rem;
+            }
+
+        }
+
+    }
 }
