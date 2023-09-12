@@ -23,6 +23,7 @@ button, .button-select {
     align-items: center;
     border: none;
     cursor: pointer;
+    transition: all 0.25s;
     
     &:hover {
         color: var(--color-main);
@@ -35,6 +36,7 @@ button, .button-select {
 
 .button-select {
     padding-right: 1.5rem;
+
     & ion-icon {
         position: absolute;
         transform: translate(55px, 2px);
@@ -239,6 +241,7 @@ footer {
             & ion-icon {
                 font-size: 26px;
                 transform: translateY(2px);
+                transition: all 0.25s;
 
                 &:hover {
                     cursor: pointer;
@@ -250,38 +253,76 @@ footer {
 }
 
 .recentCtn {
-    outline: 1px solid red;
 
     & h2 {
         & ion-icon {
             margin-right: 0.5rem;
+            transform: translateY(2px);
         }
     }
 
     .recentBx {
-        height: 180px;
+        height: 150px;
         padding: 1rem 0;
-        outline: 1px solid red;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #000;
+
+        &:hover {
+            cursor: pointer;
+
+            .recent-text {
+                & h2 {
+                    color: var(--color-main);
+                }
+            }
+
+            .recent-thumbnail-in {
+                transform: scale(1.2);
+            }
+        }
 
         .recentBx-in {
-            display: flex;
-            flex-direction: row;
-            height: 150px;
-    
+            display: grid;
+            grid-template-columns: 25% 75%;
+            height: 100%;
+
             .recent-thumbnail {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                outline: 1px solid red;
-                border-radius: 5px;
                 height: 100%;
-                width: 250px;
-                background-image: var(--bg-img);
-    
+                overflow: hidden;
+                border-radius: 5px;
+                filter: drop-shadow(2px 2px 1px #00000050);
+
+                .recent-thumbnail-in {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    background-image: var(--bg-img);
+                    background-position: center;
+                    background-size: cover;
+
+                    transition: all 0.25s ease;
+                }
             }
     
+    
             .recent-text {
-                margin-left: 0.5rem;
+                margin-left: 0.75rem;
+                display: grid;
+                grid-template-rows: 75% 25%;
+                overflow: hidden;
+
+                & h2,h3 {
+                    font-size: 18px;
+                    transition: all 0.25s;
+                    overflow: hidden;
+                }
+
+                & ion-icon {
+                    transform: translateY(3px);
+                    margin-right: 5px;
+                }
             }
 
         }
