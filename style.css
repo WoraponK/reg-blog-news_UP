@@ -6,6 +6,10 @@
 
 * {
     font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 /* template -- start */
@@ -46,22 +50,22 @@ button, .button-select {
 & h5 { font-size: 20px; }
 & h6 { font-size: 12px; }
 & p { font-size: 20px; } 
-& span { font-size: 10px; }
-& h1,h2,h4 { font-weight: 600; }
-& h3,h5,h6,p,span { font-weight: 400; }
+& span { font-size: 20px; }
+& h1,h2,h4,span { font-weight: 600; }
+& h3,h5,h6,p,li { font-weight: 400; }
 & a {
     text-decoration: none;
     cursor: pointer;
+    color: var(--color-main);
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
+& span { color: var(--color-main); }
+& li { font-size: 20px; }
 
 /* template -- end */
-
-body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-
-}
 
 .top-bar {
     height: calc(150px - 72px);
@@ -153,9 +157,7 @@ nav {
 }
 
 .wrapper {
-    outline: 1px solid red;
     width: 80%;
-    height: 100vh;
 }
 
 footer {
@@ -170,4 +172,83 @@ footer {
         margin: 0;
         color: #fff;
     }
+}
+
+.header {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+
+    & h1 {
+        margin: 0;
+        color: var(--color-main);
+    }
+
+    .header-des {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+
+        & ion-icon {
+            transform: translateY(4px);
+        }
+    }
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 75% auto;
+}
+
+.newsCtn {
+    margin-right: 2rem;
+
+    .news-thumbnail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        & img {
+            width: 900px;
+        }
+    }
+
+    .news-description {
+        margin-bottom: 3rem;
+
+        & h2,h3 { margin-bottom: 1.5rem; }
+        & li {
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+    }
+
+    .news-share {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 6rem;
+
+        .social {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+
+            & ion-icon {
+                font-size: 26px;
+                transform: translateY(2px);
+
+                &:hover {
+                    cursor: pointer;
+                    color: var(--color-main);
+                }
+            }
+        }
+    }
+}
+
+.recentCtn {
+    outline: 1px solid red;
 }
