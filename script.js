@@ -28,5 +28,5 @@ const scrollToTop = () => {
 
 const topFunction = () => {
     body.scrollTop = 0
-    document.documentElement.scrollTop = 0
+    document.documentElement.scrollTop = 0  
 }

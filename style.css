@@ -209,9 +209,10 @@ footer {
 
     .secret-image {
         position: absolute;
-        width: 25px;
+        width: 50px;
         height: 50px;
         left: 0;
+        cursor: pointer;
 
         & img {
             display: none;
