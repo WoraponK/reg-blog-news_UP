@@ -19,7 +19,7 @@ secret.addEventListener("click", () => {
 })
 
 const scrollToTop = () => {
-    if (body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    if (body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
         scrollBtn.style.display = "block"
     } else {
         scrollBtn.style.display = "none"
