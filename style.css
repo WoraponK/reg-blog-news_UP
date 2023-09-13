@@ -45,6 +45,26 @@ button, .button-select {
     }
 }
 
+#scrollToTopBtn {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    background-color: var(--color-main);
+
+    & ion-icon {
+        color: #fff;
+        font-size: 24px;
+        transform: translateY(2px);
+    }
+
+    &:hover {
+        background-color: hsl(260, 70%, 55%);
+    }
+}
+
 & h1 { font-size: 40px; }
 & h2 { font-size: 24px; }
 & h3 { font-size: 24px; }
